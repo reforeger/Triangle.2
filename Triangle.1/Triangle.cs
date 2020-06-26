@@ -11,43 +11,44 @@ namespace Triangle._1
         public double a; //Первая сторона
         public double b; //Вторая сторона
         public double c; //Третия сторона
-        public double l; //Вторая сторона
+        public double l; //Четвёртая сторона
 
 
         // Свойства
-        public double GetSetA // получить или узнать значения стороны треугольника
+        public double GetSetA 
+            // получить или узнать значения стороны треугольника
         {
             get { return a; }
             set { a = value; }
         }
-
         public double GetSetB
         {
             get { return b; }
             set { b = value; }
         }
-
         public double GetSetC
         {
             get { return c; }
             set { c = value; }
         }
-
         public double GetSetH
         {
             get { return l; }
             set { l = value; }
         }
-
-        public bool ExistTriangle // существует ли треугольник
+        public bool ExistTriangle 
+            // существует ли треугольник
         {
             get
             {
                 if ((a < b + c) && (b < a + c) && (c < a + b))
+
                     return true;
                 else return false;
             }
         }
+
+
 
         public string TriangleType
         {
@@ -75,7 +76,10 @@ namespace Triangle._1
             l = Height();
         }
 
-        public Triangle(bool byHeight, double A, double L) // конструктор с линиями по краям
+
+
+        public Triangle(bool byHeight, double A, double L) 
+            // конструктор с линиями по краям
         {
             if (byHeight == true)
             {
@@ -93,6 +97,11 @@ namespace Triangle._1
             }
         }
 
+
+
+
+
+
         public Triangle() // конструктор без атрибутов
         {
             a = 0;
@@ -100,21 +109,29 @@ namespace Triangle._1
             c = 0;
         }
 
+
+
         // Методы
         public string OutputA() // вывод сторон
         {
             return Convert.ToString(a);
         }
 
+
+
         public string OutputB()
         {
             return Convert.ToString(b);
         }
 
+
+
         public string OutputC()
         {
             return Convert.ToString(c);
         }
+
+
 
         public double Perimeter() // периметр
         {
@@ -122,10 +139,14 @@ namespace Triangle._1
             return p;
         }
 
+
+
         public double HalfPerimeter() // полупериметр
         {
             return Perimeter() / 2;
         }
+
+
 
         public double Surface() // площадь
         {
@@ -133,6 +154,8 @@ namespace Triangle._1
             double s = Math.Sqrt((p * (p - a) * (p - b) * (p - c)));
             return s;
         }
+
+
 
         public double Height() // высота
         {
